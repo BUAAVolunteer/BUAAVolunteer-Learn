@@ -1,0 +1,94 @@
+/* miniprogram/pages/Feedback/Feedback.wxss */
+view,
+input,
+textarea {
+  box-sizing: border-box;
+}
+
+button {
+  background-color: #fff;
+  border-radius: 0px;
+  font-size: 14px;
+  text-align: left;
+  line-height: 15px;
+}
+
+.header {
+  width: 100vw;
+}
+
+.main {
+  padding: 40rpx;
+}
+
+.project,
+.question,
+.contact {
+  margin-bottom: 20rpx;
+}
+
+.project__title,
+.question__title,
+.contact__title {
+  font-size: 28rpx;
+  margin-bottom: 10rpx;
+}
+
+.project__title--bold,
+.question__title--bold,
+.contact__title--bold {
+  font-weight: bold;
+}
+
+.project__title--red,
+.question__title--red,
+.contact__title--red {
+  color: #e54d42;
+  margin-left: 20rpx;
+}
+
+.project__input,
+.question__textarea,
+.contact__input {
+  font-size: 28rpx;
+}
+
+.project__input input,
+.question__textarea textarea,
+.contact__input input {
+  background-color: #fff;
+  border-radius: 8rpx;
+  border: 2rpx solid #dcdfe6;
+  color: #606266;
+  outline: none;
+  text-align: left;
+  width: 100%;
+}
+
+.project__input input,
+.contact__input input {
+  height: 80rpx;
+  line-height: 80rpx;
+  padding: 0 15rpx;
+}
+
+.question__textarea textarea {
+  height: 180rpx;
+  line-height: 40rpx;
+  padding: 15rpx;
+}
+
+.submit {
+  border-radius: 8rpx;
+  border: 1rpx solid;
+  border-color: #b3d8ff;
+  color:  #0081ff;
+  display: flex;
+  font-weight: 500;
+  font-size: 32rpx;
+  justify-content: center;
+  margin: 20px 0;
+  outline: none;
+  padding: 25rpx 0;
+  width: 100%;
+}

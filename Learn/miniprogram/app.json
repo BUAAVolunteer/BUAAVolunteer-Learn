@@ -1,0 +1,42 @@
+{
+  "pages": [
+    "pages/Feedback/Feedback",
+    "pages/FeedbackComment/FeedbackComment",
+    "pages/Learn/Learn"
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#F6F6F6",
+    "navigationBarTitleText": "云开发 QuickStart",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#7A7E83",
+    "selectedColor": "#54a2fe",
+    "borderStyle": "black",
+    "backgroundColor": "#fff",
+    "list": [
+      {
+        "pagePath": "pages/Learn/Learn",
+        "iconPath": "assets/icons/tabBar/about.png",
+        "selectedIconPath": "assets/icons/tabBar/about_cur.png",
+        "text": "学习"
+      },
+      {
+        "pagePath": "pages/Feedback/Feedback",
+        "iconPath": "assets/icons/tabBar/component.png",
+        "selectedIconPath": "assets/icons/tabBar/component_cur.png",
+        "text": "反馈问题"
+      },
+      {
+        "pagePath": "pages/FeedbackComment/FeedbackComment",
+        "iconPath": "assets/icons/tabBar/plugin.png",
+        "selectedIconPath": "assets/icons/tabBar/plugin_cur.png",
+        "text": "审核反馈"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json",
+  "style": "v2"
+}
