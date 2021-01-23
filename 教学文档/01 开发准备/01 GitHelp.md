@@ -1,12 +1,12 @@
 ## Git 常用命令
 
-- git clone
-
-- git checkout [分支名]
-- git checkout -b [分支名] [远程分支名]
-- git pull
-- git push
-- git reset
+- 下载项目到本地：git clone [项目地址]
+- 下载当前项目的最新更新到本地：git pull
+- 切换分支：git checkout [分支名]
+- 切换Tag：git checkout [Tag名]
+- 将项目下所有文件加入暂存区：git add .
+- 将暂存区的内容打包成commit，提交到本地仓库：git commit -m "[提交理由]"
+- 将本地仓库的内容提交到远程仓库：git push
 
 #### 仓库
 ```
