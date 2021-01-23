@@ -12,7 +12,7 @@
       <text class="project__title--red">*</text>
     </view>
     <view class="project__input">
-      <input placeholder="小程序使用问题" type="text" />
+      <input placeholder="小程序使用问题" type="text" model:value="{{project}}" />
     </view>
   </view>
   <!-- 问题描述 -->
@@ -22,7 +22,7 @@
       <text class="question__title--red">*</text>
     </view>
     <view class="question__textarea">
-      <textarea placeholder="请详细描述你的问题" type="text" />
+      <textarea placeholder="请详细描述你的问题" type="text" model:value="{{detail}}" />
     </view>
   </view>
   <!-- 联系方式 -->
@@ -32,11 +32,11 @@
       <text class="contact__title--red">*</text>
     </view>
     <view class="contact__input">
-      <input placeholder="请填写手机号或邮箱，问题解决后我们会联系您~" type="text" />
+      <input placeholder="请填写手机号或邮箱，问题解决后我们会联系您~" type="text" model:value="{{contect}}" />
     </view>
   </view>
   <!-- 提交按钮 -->
   <view class="submit">
-    <view class="submit__content">提交反馈</view>
+    <view class="submit__content" bindtap="submitFeedback">提交反馈</view>
   </view>
 </view>

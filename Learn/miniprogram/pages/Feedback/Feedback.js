@@ -1,11 +1,14 @@
 // miniprogram/pages/Feedback/Feedback.js
+const db = wx.cloud.database()
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    project: "",
+    detail: "",
+    contect: ""
   },
 
   /**
@@ -27,6 +30,27 @@ Page({
    */
   onShow: function () {
 
+  },
+
+  submitFeedback: function() {
+    console.log("project: " + this.data.project)
+    console.log("detail : " + this.data.detail)
+    console.log("contect: " + this.data.contect)
+    db.collection("feedback").add({
+      data: {
+        project: this.data.project,
+        detail: this.data.detail,
+        contect: this.data.contect
+      }
+    }).then(
+      wx.showModal({
+        title: '提交成功',
+        content: '反馈已提交成功，请等待管理员回复',
+        showCancel: false,
+        confirmText: '确定',
+        confirmColor: '#3CC51F',
+      })
+    )
   },
 
   /**
