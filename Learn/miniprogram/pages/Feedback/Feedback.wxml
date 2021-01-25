@@ -8,7 +8,7 @@
   <!-- 项目名称 -->
   <view class="project">
     <view class="project__title">
-      <text class="project__title--bold">你想反映的问题发生在哪个项目？</text>
+      <text class="project__title--bold">你想反映的问题发生在哪个项目!</text>
       <text class="project__title--red">*</text>
     </view>
     <view class="project__input">
