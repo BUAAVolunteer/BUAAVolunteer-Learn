@@ -35,12 +35,12 @@ Page({
   submitFeedback: function() {
     console.log("project: " + this.data.project)
     console.log("detail : " + this.data.detail)
-    console.log("contect: " + this.data.contect)
+    console.log("contect: " + this.data.contact)
     db.collection("feedback").add({
       data: {
         project: this.data.project,
         detail: this.data.detail,
-        contect: this.data.contect
+        contact: this.data.contact
       }
     }).then(
       wx.showModal({

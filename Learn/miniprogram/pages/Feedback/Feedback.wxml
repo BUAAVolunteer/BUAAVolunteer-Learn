@@ -32,7 +32,7 @@
       <text class="contact__title--red">*</text>
     </view>
     <view class="contact__input">
-      <input placeholder="请填写手机号或邮箱，问题解决后我们会联系您~" type="text" model:value="{{contect}}" />
+      <input placeholder="请填写手机号或邮箱，问题解决后我们会联系您~" type="text" model:value="{{contact}}" />
     </view>
   </view>
   <!-- 提交按钮 -->
