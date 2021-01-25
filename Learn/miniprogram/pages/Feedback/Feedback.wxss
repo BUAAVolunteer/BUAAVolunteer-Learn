@@ -87,6 +87,7 @@ button {
   font-weight: 500;
   font-size: 32rpx;
   justify-content: center;
+  line-height: 32rpx;
   margin: 20px 0;
   outline: none;
   padding: 25rpx 0;
