@@ -36,7 +36,7 @@
 
     ```css
   .box{
-        justify-content: start | end | center | space-around | space-between;
+        justify-content: flex-start | flex-end | center | space-around | space-between;
   }
     ```
   
