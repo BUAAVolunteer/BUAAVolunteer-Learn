@@ -1,4 +1,4 @@
-## 盒子模型介绍
+## 04 盒子模型介绍与Display
 
 盒子模型（box model) ：所有元素都可以看作矩形的盒子，由 **wxss **决定这些盒子的大小、位置以及属性（例如颜色、背景、边框尺寸等）
 
@@ -8,7 +8,7 @@
 
 
 
-### 一、内容区域（contest area）
+### 一、内容区域（content area）
 
 - 功能：存放盒子的内容，例如文本、图像，或是视频播放器。
 - 尺寸是内容宽度（*content-box* 宽度）和内容高度（*content-box* 高度）。
@@ -102,19 +102,19 @@
   ##### **wxml 部分**
 
   ```html
-  <view class = "content-box">Content box</view>
-  <view class = "border-box">Border box</view>
+  <view class="content-box">Content box</view>
+  <view class="border-box">Border box</view>
   ```
 
   ##### wxss 部分
 
   ```css
-  .view {
+  view {
     width: 160px;
     height: 80px;
     padding: 20px;
     border: 8px solid red;
-    background: yellow;
+    background-color: yellow;
   }
   
   .content-box {
@@ -129,3 +129,33 @@
   ##### 运行结果：
 
   ![2](image\2.png)
+
+### 六、Display属性
+
+> The **`display`** [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS) property sets whether an element is treated as a [block or inline element](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flow_Layout) and the layout used for its children, such as [flow layout](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flow_Layout), [grid](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout) or [flex](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout).
+
+#### 1. 块状元素还是行内元素？
+
+> 行内元素：text，image
+>
+> 块状元素：view，input，textarea
+
+#### 2. 什么元素不能设置宽度？
+
+> 不可替换的行内元素，不能设置宽度
+
+- 什么叫可替换？
+
+> image就属于可替换元素，其展示已经交给外部图片来决定了，因此image可以设置宽高
+>
+> 但text不行
+
+#### 3. display的可选值
+
+> inline：行内元素，不可替换，不可设置宽高
+>
+> inline-block：行内元素，但具备block块状元素的特性，可以设置宽高
+>
+> block：块状元素，可以设置宽高
+>
+> flex、grid...：布局元素，表示子标签的某种布局特点

@@ -6,7 +6,6 @@
 
 - 参考文档：https://developer.mozilla.org/zh-CN/
 - 官方文档：https://www.w3.org/TR/?tag=css
-- CSS可用性问题：
 
 ### 一、CSS样式的书写格式
 
@@ -67,7 +66,7 @@ input {
 
 #### 2. class选择器
 
-- 为制定class的标签设置样式，选择器名为【class名】
+- 为指定class的标签设置样式，选择器名为【class名】
 
 ```html
 <!-- class名为view1 -->

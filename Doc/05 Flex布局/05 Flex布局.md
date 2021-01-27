@@ -8,7 +8,7 @@
 
 * 容器默认存在两根轴：水平的主轴（main axis）和垂直的交叉轴（cross axis）, 项目默认沿主轴排列
 
-  > <img src="image/image-20210123193017594.png" alt="image-20210123193017594" style="zoom: 33%;" /> 
+  <img src="image/image-20210123193017594.png" alt="image-20210123193017594" style="zoom:80%;" /> 
 
   > 主轴的开始位置（与边框的交叉点）叫做`main start`
   >
@@ -143,79 +143,61 @@
 
     <img src="image/image-20210123214012581.png" alt="image-20210123214012581" style="zoom:25%;" /> 
 
-### 四、举个栗子
+### 四、作业
 
-* 示意图
+* 请在以下代码基础上，完成如图所示的效果
 
-  <img src="image/image-20210123233547829.png" alt="image-20210123233547829" style="zoom:30%;" />
+* **允许且仅允许使用flex布局相关的样式，请不要用padding、margin等实现**
+
+  <img src="image/image-20210123233547829.png" alt="image-20210123233547829" style="zoom: 80%;" />
 
 * wxml
 
   ```html
   <view class="box">
     <view class="item1">
-      <text >Ironman</text>
+      <text>text1</text>
+      <text>text2</text>
+      <text>text3</text>
     </view>
     <view class="item2">
-      <text>Spiderman</text>
-      <text>Blackwidow</text>
-      <text>Hawkeye</text>
-      <text>Falcon</text>
+      <text>text1</text>
+      <text>text2</text>
+      <text>text3</text>
     </view>
     <view class="item3">
-      <text >Captain</text>
-    </view>
-    <view class="item4">
-      <text >Thor</text>
-      <text >Loki</text>
+      <view>text1</view>
+      <view>text2</view>
+      <view>text3</view>
     </view>
   </view>
   ```
-
+  
 * wxss
 
   ```css
-  text{
-    border:medium solid white;
-  }
-  
-  view{
-    display: flex;
-  }
-  
-  .box{
+  .box {
     background-color: antiquewhite;
     height: 400px;
-    justify-content: space-around;
   }
   
-  .item1{
-    background-color: gold;
-    height: 50px;
-    width: 70px;
-  }
-  
-  .item2{
-    align-items: flex-end;
-    background-color: tomato;
-    flex-direction: column-reverse;
-    height: 375px;
-    justify-content:space-around;
-    width: 100px;
-  }
-  
-  .item3{
-    background-color: steelblue;
-    height: 35px;
-    width: 70px;
-  }
-  
-  .item4{
-    align-items: center;
-    background-color: darkseagreen;
-    flex-direction: column;
+  .item1,
+  .item2,
+  .item3 {
+    width: 40%;
     height: 150px;
-    justify-content: flex-end;
-    width: 100px; 
   }
+  
+  .item1 {
+    background-color: gold;
+  }
+  
+  .item2 {
+    background-color: tomato;
+  }
+  
+  .item3 {
+    background-color: steelblue;
+  }
+  
   ```
