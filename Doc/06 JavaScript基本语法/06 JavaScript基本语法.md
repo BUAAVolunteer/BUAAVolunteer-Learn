@@ -1,6 +1,6 @@
 ## 06	JavaScript基本语法
 
-教程推荐：[廖雪峰的JavaScript教程]()
+教程推荐：[廖雪峰的JavaScript教程](https://www.liaoxuefeng.com/wiki/1022910821149312)
 
 **注意**：对于小程序目前用到的语法只需要看到面向对象之前即可，另外闭包和生成器也没有用到。
 
@@ -123,24 +123,32 @@ JavaScript中的布尔运算（! && ||）和C语言中的一致，但是仅限�
 除了运算符之外，不同类型的变量还有一些方法可以使用。其使用方式为：变量.方法名()。一些典型的方法如下所示：
 
 ```javascript
-String.split()		//分割字符串
-String.replace()	//代替子串
-String.indexOf()	//查找子串位置
-String.slice()		//取出字符串子串
+var a = " "
+a.split()			//分割字符串
+a.replace()			//代替子串
+a.indexOf()			//查找子串位置
+a.slice()			//取出字符串子串
 
-Number.toFixed()	//四舍五入到小数点后某一位数
-Number.ceil()		//向上取整
-Number.floor()		//向下取整
-Number.toString()	//转换为String类型
+var a = 1.12
+a.toFixed()			//四舍五入到小数点后某一位数
+a.ceil()			//向上取整
+a.floor()			//向下取整
+a.toString()		//转换为String类型
 
-Array.join()		//将数组中所有元素合并
-Array.indexOf()		//查找元素
-Array.sort()		//数组元素排序
-Array.push()		//将一个元素加入到末尾
-Array.pop()			//将一个元素加入到开头
+var a = [1, "1"]
+a.length			//获取数据长度
+a.join()			//将数组中所有元素合并
+a.indexOf()			//查找元素
+a.sort()			//数组元素排序
+a.push()			//将一个元素加入到末尾
+a.pop()				//将一个元素加入到开头
 
-Object.keys()		//返回Object的所有键组成的数组
-Object.values()		//返回Object的所有值组成的数组
+var a = {
+    a: 1,
+	b: 2
+}
+Object.keys(a)		//返回Object的所有键组成的数组
+Object.values(a)	//返回Object的所有值组成的数组
 ```
 
 这里展示的只是方法的名称，具体的使用方式还请自行查找资料。
@@ -239,10 +247,19 @@ let的作用域为声明语句所在的函数块（"{}"包裹的部分），如�
 
 2. 编写一个函数能以JSON字符串格式（自行查询）在控制台打印输入的Object类型变量（不要用toString()方法）。
 
-3. 用JavaScript实现一个链表，实现插入、删除、查找、更新的功能，并进行测试。操作函数样例：
+3. 定义两个函数，第一个函数add输入a输出b，第二个函数del输入b输出a，其中a和b如下（add和del函数内不应出现a和b的具体形式，具体写出的常量只能有"text2"和{}，相当于只能对a作补充或者对b作删减得到结果）：
 
    ```javascript
-   function insert(a, data, pos){		//a为被操作的链表数据，data为插入链表的数据，pos为插入的位置
-       
+   var a = {
+       data: "text",
+       next: {}
+   }
+   
+   var b = {
+       data: "text",
+       next: {
+           data: "text2",
+           next: {}
+       }
    }
    ```

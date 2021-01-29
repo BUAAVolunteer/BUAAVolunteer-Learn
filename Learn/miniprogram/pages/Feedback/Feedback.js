@@ -29,6 +29,34 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
+    var a = {
+      a: 1,
+      b: 2
+    }
+
+    //方法1:
+    let key = Object.keys(a)
+    let value = Object.values(a);
+    let ans = "{"
+    for (let i = 0; i < key.length; i++) {
+      ans += (key[i] + ':' + value[i])
+      ans += ','
+    }
+    ans = ans.substring(0,ans.length-1) + '}'
+    console.log(ans) 
+
+    //方法2:
+    let v = Object.values(a)
+    let k = Object.keys(a)
+    let fin= "{"
+    for(let i=0; i<k.length;i++){
+      fin+=(k[i]+":"+v[i])
+      if(i==(k.length-1)){
+        fin += "}"
+      }
+      else fin+=","
+    }
+    console.log(fin)
 
   },
 
