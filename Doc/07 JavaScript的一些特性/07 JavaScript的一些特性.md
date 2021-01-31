@@ -217,5 +217,14 @@ Page({
 ### 4	作业
 
 1. 利用JavaScript的定时函数setTimeout来对一个数组进行排序（数组中的元素全为Number类型且不大于100，两个数字之差不小于5）
+
+   ```javascript
+   setTimeout(function(){  //等待后执行的函数
+       console.log(a)
+   }, a)//等待的毫秒数
+   ```
+
+   
+
 2. 利用promise语法将上述setTimeout实现的排序改变为顺序输出（如果第一题使用for循环实现的话，请将循环改成递归）。
 
