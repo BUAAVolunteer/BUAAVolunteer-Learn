@@ -15,12 +15,6 @@ App({
       })
     }
 
-    this.globalData = {
-      name: "柯瑞奇"
-    }
-  },
-
-  show: function () {
-    console.log("我不做人类了")
+    this.globalData = {}
   }
 })
