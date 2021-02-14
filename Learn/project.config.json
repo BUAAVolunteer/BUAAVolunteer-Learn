@@ -41,16 +41,13 @@
   "projectname": "Learn",
   "libVersion": "2.14.3",
   "condition": {
-    "search": {
-      "list": []
-    },
-    "conversation": {
-      "list": []
-    },
     "plugin": {
       "list": []
     },
     "game": {
+      "list": []
+    },
+    "gamePlugin": {
       "list": []
     },
     "miniprogram": {
@@ -58,7 +55,19 @@
         {
           "id": -1,
           "name": "db guide",
-          "pathName": "pages/databaseGuide/databaseGuide"
+          "pathName": "pages/databaseGuide/databaseGuide",
+          "query": ""
+        },
+        {
+          "name": "learn",
+          "pathName": "pages/Learn/Learn",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "FeedbackComment",
+          "pathName": "pages/FeedbackComment/FeedbackComment",
+          "scene": null
         }
       ]
     }

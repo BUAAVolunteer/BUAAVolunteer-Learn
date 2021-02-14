@@ -1,2 +1,10 @@
-<!--miniprogram/pages/FeedbackComment/FeedbackComment.wxml-->
-<text>miniprogram/pages/FeedbackComment/FeedbackComment.wxml</text>
+<!--pages/Admin/FeedbackComment/FeedbackComment.wxml-->
+<view class="noevent" wx:if="{{comment_list.length == 0}}">
+  暂无反馈信息
+</view>
+<scroll-view class="event" wx:else scroll-y="{{true}}">
+  <!-- 组件传参，properties里写的都是要传入的 -->
+  <block wx:for="{{comment_list}}" wx:key="index">
+    <feedback-events comment="{{item}}" id="{{index}}" binddelete="deleteItem"></feedback-events>
+  </block>
+</scroll-view>

@@ -1,1 +1,2 @@
 <!--miniprogram/pages/Learn/Learn.wxml-->
+<textarea auto-height="{{true}}"></textarea>
