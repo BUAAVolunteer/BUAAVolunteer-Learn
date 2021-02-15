@@ -1,21 +1,29 @@
 .comment {
+  background-color: #535353;
   border-radius: 20rpx;
   color: #fff;
-  margin: 30rpx auto;
-  padding: 45rpx 30rpx 30rpx;
+  font-size: 27rpx;
   width: 650rpx;
+  margin: 30rpx auto;
+  padding: 50rpx 20rpx 30rpx;
 }
 
-.comment__title {
-  font-size: 27.17rpx;
-  letter-spacing: 5rpx;
-  margin-bottom: 8rpx;
+.comment__main {
+  padding: 0 10rpx;
 }
 
-.comment__time {
-  font-size: 22.64rpx;
-  letter-spacing: 5.5rpx;
-  margin-bottom: 15rpx;
+.comment__main__title {
+  margin-bottom: 16rpx;
+}
+
+.comment__main__time {
+  font-size: 23rpx;
+  margin-bottom: 30rpx;
+}
+
+.comment__main__content {
+  line-height: 41rpx;
+  margin-bottom: 30rpx;
 }
 
 .comment__textarea--display,
@@ -23,9 +31,7 @@
   border-radius: 20rpx;
   font-size: 23rpx;
   color: #fff;
-  margin-left: -10rpx;
   padding: 25rpx;
-  width: 610rpx;
 }
 
 .comment__textarea {
@@ -35,6 +41,7 @@
 
 .comment__textarea--display {
   background-color: #99CF9C;
+  letter-spacing: 3rpx;
 }
 
 .comment__textarea textarea {
@@ -49,12 +56,13 @@
   font-size: 27rpx;
   letter-spacing: 3.63rpx;
   line-height: 40rpx;
+  letter-spacing: 3rpx;
   margin-bottom: 20rpx;
 }
 
 .comment__action {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 .action__comment image,
@@ -63,17 +71,8 @@
   height: 30rpx;
 }
 
-.action__comment {
-  margin-left: 120rpx;
-}
-
-.action__delete {
-  margin-right: 120rpx;
-}
-
-.action__send image {
-  width: 0;
-  height: 0;
+.action__send {
+  display: none;
 }
 
 .action__delete,
@@ -117,47 +116,50 @@
 
 @keyframes toleft {
   0% {
-    transform: translateX(0);
+    transform: translateX(60rpx);
   }
 
   40% {
-    transform: translateX(-60rpx) rotate(-8deg);
+    transform: rotate(-8deg);
   }
 
   60% {
-    transform: translateX(-40rpx) rotate(20deg);
+    transform: translateX(40rpx) rotate(20deg);
   }
 
   100% {
-    transform: translateX(-50rpx) rotate(0);
+    transform: translateX(0rpx) rotate(0);
   }
 }
 
 @keyframes toright {
   0% {
-    transform: translateX(0);
+    transform: translateX(-60rpx);
   }
 
   40% {
-    transform: translateX(60rpx) rotate(8deg);
+    transform: rotate(8deg);
   }
 
   60% {
-    transform: translateX(40rpx) rotate(-20deg);
+    transform: translateX(-40rpx) rotate(-20deg);
   }
 
   100% {
-    transform: translateX(50rpx) rotate(0);
+    transform: translateX(0rpx) rotate(0);
   }
 }
 
 .animation--rotatein {
   animation: rotatein 0.65s forwards;
+  display: block;
 }
 
 @keyframes rotatein {
   0% {
     transform: rotate(0);
+    width: 0;
+    height: 0;
   }
 
   100% {
