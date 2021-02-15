@@ -50,6 +50,12 @@ Page({
         showCancel: false,
         confirmText: '确定',
         confirmColor: '#3CC51F',
+        success: function(){
+          wx.switchTab({
+            url: '../FeedbackComment/FeedbackComment'
+          });
+            
+        }
       })
     )
   },
