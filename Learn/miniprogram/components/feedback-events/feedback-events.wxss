@@ -1,3 +1,8 @@
+/* miniprogram/Learn/Learn.wxss */
+view {
+  box-sizing: border-box;
+}
+
 .comment {
   background-color: #535353;
   border-radius: 20rpx;
@@ -26,38 +31,31 @@
   margin-bottom: 30rpx;
 }
 
-.comment__textarea--display,
-.comment__textarea {
+.comment__input,
+.comment__input--display {
   border-radius: 20rpx;
-  font-size: 23rpx;
-  color: #fff;
+  min-height: 83rpx;
   padding: 25rpx;
 }
 
-.comment__textarea {
+.comment__input {
+  background-color: #707070;
   display: none;
   margin-bottom: 30rpx;
 }
 
-.comment__textarea--display {
+.comment__input--display {
   background-color: #99CF9C;
   letter-spacing: 3rpx;
 }
 
-.comment__textarea textarea {
-  min-height: 25rpx;
+.comment__input textarea {
+  width: auto;
+  letter-spacing: 3px;
 }
 
 .input-placeholder {
   color: lightgray;
-}
-
-.comment__content {
-  font-size: 27rpx;
-  letter-spacing: 3.63rpx;
-  line-height: 40rpx;
-  letter-spacing: 3rpx;
-  margin-bottom: 20rpx;
 }
 
 .comment__action {
@@ -65,32 +63,25 @@
   justify-content: space-around;
 }
 
-.action__comment image,
-.action__delete image {
-  width: 30rpx;
+.comment__action image {
   height: 30rpx;
+  width: 30rpx;
 }
 
-.action__send {
+.comment__action__submit {
   display: none;
 }
 
-.action__delete,
-.action__send image {
-  transition: all 0.65s ease;
-}
-
-
-
-/*------------下面为动画---------------*/
-
+/*
+* 以下为动画部分
+*/
 .animation--all {
-  animation: shake 0.5s forwards;
+  animation: shake 0.5s;
 }
 
 @keyframes shake {
   0% {
-    transform: translateY(0rpx);
+    transform: translateY(0);
   }
 
   50% {
@@ -150,35 +141,16 @@
   }
 }
 
-.animation--rotatein {
-  animation: rotatein 0.65s forwards;
+.animation--input {
   display: block;
-}
-
-@keyframes rotatein {
-  0% {
-    transform: rotate(0);
-    width: 0;
-    height: 0;
-  }
-
-  100% {
-    width: 30rpx;
-    height: 30rpx;
-    transform: rotate(360deg);
-  }
-}
-
-.animation--jumpin {
-  display: block;
-  animation: jumpin 0.5s forwards;
+  animation: jumpin 0.75s forwards;
 }
 
 @keyframes jumpin {
   0% {
+    background-color: #535353;
     transform: translateY(0rpx);
     width: 0;
-    background-color: #535353;
   }
 
   50% {
@@ -191,7 +163,27 @@
   }
 
   100% {
-    transform: translateY(0);
     background-color: #707070;
+    transform: translateY(0);
+  }
+
+}
+
+.animation--submit {
+  animation: rotatein 0.65s forwards;
+  display: block;
+}
+
+@keyframes rotatein {
+  0% {
+    transform: rotate(0);
+    width: 0rpx;
+    height: 0rpx;
+  }
+
+  100% {
+    width: 30rpx;
+    height: 30rpx;
+    transform: rotate(360deg);
   }
 }
