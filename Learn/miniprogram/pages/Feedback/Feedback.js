@@ -9,7 +9,7 @@ Page({
   data: {
     project: "",
     detail: "",
-    contect: ""
+    contact: ""
   },
 
   /**
@@ -36,12 +36,14 @@ Page({
   submitFeedback: function() {
     console.log("project: " + this.data.project)
     console.log("detail : " + this.data.detail)
-    console.log("contect: " + this.data.contact)
+    console.log("contact: " + this.data.contact)
     db.collection("feedback").add({
       data: {
         project: this.data.project,
         detail: this.data.detail,
-        contact: this.data.contact
+        phone: this.data.contact,
+        check: false,
+        name: app.globalData.name,
       }
     }).then(
       wx.showModal({
@@ -49,13 +51,7 @@ Page({
         content: '反馈已提交成功，请等待管理员回复',
         showCancel: false,
         confirmText: '确定',
-        confirmColor: '#3CC51F',
-        success: function(){
-          wx.switchTab({
-            url: '../FeedbackComment/FeedbackComment'
-          });
-            
-        }
+        confirmColor: '#3CC51F'
       })
     )
   },

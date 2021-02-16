@@ -1,5 +1,6 @@
 // pages/Admin/FeedbackComment/FeedbackComment.js
-const db = wx.cloud.database();
+const cloud = wx.cloud;
+const db = cloud.database();
 Component({
   /**
    * 组件的属性列表
@@ -19,10 +20,19 @@ Component({
   methods: {
     deleteItem(e) {
       let index = parseInt(e.currentTarget.id);
+      var _id = this.data.comment_list[index]._id
       this.data.comment_list.splice(index, 1);
-      this.setData({
-        comment_list: this.data.comment_list,
-      });
+      cloud.callFunction({
+        name: "operateFeedback",
+        data: {
+          type: "delete",
+          _id,
+        },
+      }).then(() => {
+        this.setData({
+          comment_list: this.data.comment_list,
+        });
+      })
     },
   },
   /**

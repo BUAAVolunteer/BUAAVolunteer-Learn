@@ -1,5 +1,6 @@
 // pages/Admin/childCpn/feedback-events/feedback-events.js
-const db = wx.cloud.database();
+const cloud = wx.cloud;
+const db = cloud.database();
 Component({
   /**
    * 组件的属性列表
@@ -51,22 +52,20 @@ Component({
       let _id = this.properties.comment._id;
       let that = this;
       console.log(_id);
-      db.collection("feedback")
-        .doc(_id)
-        .update({
-          // data 传入需要局部更新的数据
-          data: {
-            // 表示将 check 字段置为 true
+      cloud.callFunction({
+        name: "operateFeedback",
+        data: {
+          type: "update",
+          _id,
+          content,
+        },
+        success() {
+          that.setData({
             check: true,
-            content,
-          },
-          success() {
-            that.setData({
-              check: true,
-              open: false,
-            });
-          },
-        });
+            open: false,
+          });
+        },
+      })
     },
     delete() {
       this.triggerEvent("delete");

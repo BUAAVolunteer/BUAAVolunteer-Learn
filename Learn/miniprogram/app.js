@@ -15,6 +15,8 @@ App({
       })
     }
 
-    this.globalData = {}
+    this.globalData = {
+      name: "蓝天志愿者协会"
+    }
   }
 })
