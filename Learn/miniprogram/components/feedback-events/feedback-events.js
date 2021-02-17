@@ -68,6 +68,7 @@ Component({
       })
     },
     delete() {
+      //触发父组件的事件，其实并不需要这一步，只是作为演示
       this.triggerEvent("delete");
     },
   },
